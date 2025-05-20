@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="estilo.css">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>ToDo List</title>
+    </head>
+    <body>
+        <div class="layout">
+            <header class="header">
+                <img src="img/Logo.png" alt="logo">
+            </header>
+            <section class="infos">
+                <input id="input_adicionar" type="text" placeholder="Adicione uma nova tarefa">
+                    <button id="button_criar" type="submit"> Criar <img src="img/plus.png" alt="plus"> </button>
+            </section>
+            <section class="num_tarefas">
+                <div class="criadas">
+                    <h4>Tarefas criadas </h4>
+                    <div id="contador_criadas">
+                        <h4> 0 </h4>
+                    </div>
+                </div>
+                <div class="concluidas">
+                    <h4> Concluídas </h4>
+                    <div id="contador_concluidas">
+                        <h4> 0 </h4>
+                    </div>
+                </div>
+            </section>
+            <div id="barra">
+                <hr>
+            </div>
+            <main class="main">
+                <div class="background">
+                    <img src="img/Clipboard.png" alt="clipboard">
+                    <p>Você ainda não tem tarefas cadastradas</p>
+                    <p>Crie tarefas e organize seus itens a fazer</p>
+                </div>
+                <section class="tasks_list">
+                    <div class="task"> <!--DEIXANDO AQUI VAZIO POIS SÓ VAI SER ADICIONADO TASKS COM O JAVASCRIPT-->
+                    </div>
+                </section>
+            </main>
+        </div>
+    </body>
+</html>
