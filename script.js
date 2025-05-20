@@ -1,16 +1,16 @@
 const form = document.querySelector('form');
 const inputAdicionar = document.querySelector('#input_adicionar')
-
+const taks = document.querySelector('.task')
 
 form.onsubmit = function(event){
     event.preventDefault()
-
+    closeBackground.close()
     
 }
 
-function criandoTarefa(tarefa){
+function criandoTarefa(){
     const tarefa = inputAdicionar.value
-
+    
     
 }
 
