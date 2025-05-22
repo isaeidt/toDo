@@ -3,15 +3,18 @@ const inputAdicionar = document.querySelector('#input_adicionar')
 const tasks_list = document.querySelector('.tasks_list')
 const criadas = document.querySelector('#contador_criadas h4')
 const concluidas = document.querySelector('#contador_concluidas h4')
-const textoTarefa = document.querySelector('.task-text p')
-const checkbox = document.querySelector('.task-checkbox')
+
 var contadorCriadas = 0
 var contadorConcluidas = 0
 
 form.onsubmit = function(event){
     event.preventDefault()
     Background.close()
-    criandoTarefa()
+    if(!inputAdicionar.value){
+        Background.open()
+    }else{
+        criandoTarefa()
+    }
 }
 
 function criandoTarefa(){
