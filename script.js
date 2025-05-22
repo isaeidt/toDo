@@ -3,7 +3,8 @@ const inputAdicionar = document.querySelector('#input_adicionar')
 const tasks_list = document.querySelector('.tasks_list')
 const criadas = document.querySelector('#contador_criadas h4')
 const concluidas = document.querySelector('#contador_concluidas h4')
-const textoTarefa = document.querySelector('task-text')
+const textoTarefa = document.querySelector('.task-text p')
+const checkbox = document.querySelector('.task-checkbox')
 var contadorCriadas = 0
 var contadorConcluidas = 0
 
@@ -55,7 +56,43 @@ function criandoTarefa(){
           Background.open()
         }
         tasks.remove();
+        contadorConcluidas--
+            if(contadorConcluidas < 0){
+                contadorConcluidas = 0
+                concluidas.innerHTML = contadorConcluidas
+            }
+            if(contadorConcluidas == 0){
+                concluidas.innerHTML = contadorConcluidas
+            }
+            else{
+                concluidas.innerHTML = contadorConcluidas + " de " + contadorCriadas
+            }
     })
+
+    checkbox.addEventListener('change', function(){
+
+        if(checkbox.checked){
+            taskText.classList.add('riscado')
+            contadorConcluidas++
+            concluidas.innerHTML = contadorConcluidas + " de " + contadorCriadas
+        }
+        else{
+            taskText.classList.remove('riscado')
+            contadorConcluidas--
+            if(contadorConcluidas < 0){
+                contadorConcluidas = 0
+                concluidas.innerHTML = contadorConcluidas
+            }
+            if(contadorConcluidas == 0){
+                concluidas.innerHTML = contadorConcluidas
+            }
+            else{
+                concluidas.innerHTML = contadorConcluidas + " de " + contadorCriadas
+            }
+        }
+        
+    })
+    
     
 }
 
@@ -70,10 +107,6 @@ const Background = {
     }
 }  
 
-
-function tarefasConcluidas() {
-    textoTarefa.classList.add('riscado')
-}
 
 
 
