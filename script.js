@@ -4,8 +4,8 @@ const tasks_list = document.querySelector('.tasks_list')
 const criadas = document.querySelector('#contador_criadas h4')
 const concluidas = document.querySelector('#contador_concluidas h4')
 
-var contadorCriadas = 0
-var contadorConcluidas = 0
+let contadorCriadas = 0
+let contadorConcluidas = 0
 
 form.onsubmit = function(event){
     event.preventDefault()
