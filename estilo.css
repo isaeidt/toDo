@@ -92,22 +92,20 @@
  .num_tarefas{
   display: flex;
   justify-content: space-between;
-  width: 100%;
   font-size: 0.625rem;
   user-select: none;
-  gap: 20rem; 
-  padding: 0.25rem;  
-  justify-content: center; 
 }
 
 .criadas {
   color: #1E6F9F;
+  margin: auto;
   display: flex;
   gap: 0.5rem;
 }
 
 .concluidas {
   display: flex;
+  margin: auto;
   gap: 0.5rem;
   color: #8284FA;
 }
@@ -157,7 +155,7 @@
 .tasks{
   display: flex;
   align-items: center;
-  width: 45%;
+  width: 50%;
   border: 1px solid;
   font-size: 0.5rem;
   background-color: #262626;
@@ -165,8 +163,7 @@
   padding: 1.25rem;
   border-radius: 0.4375rem;
   border-color: #262626;
-  margin-left: 18.75rem;
-  margin-bottom: 0.625rem;
+  margin: auto;
   gap: 0.625rem;
   box-sizing: border-box;
   overflow: hidden;
